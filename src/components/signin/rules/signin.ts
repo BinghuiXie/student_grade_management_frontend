@@ -28,6 +28,7 @@ export const checkEmployeeId = (rule: any, value: string, cb: any) => {
 // TODO: 正则判断输入值是否符合规则后期封装成一个公共方法
 
 export const checkStudentId = (rule: any, value: string, cb: any) => {
+    console.log(value)
     if(!value) {
         return cb(new Error('学号不能为空'));
     }
@@ -78,13 +79,13 @@ export const checkPhoneNumber = (rule: any, value: string, cb: any) => {
     }
 }
 
-export const checkAuthCode = (rule: any, value: string, cb: any) => {
+export const checkAdminUsername = (rule: any, value: string, cb: any) => {
     if(!value) {
-        return cb(new Error('验证码不能为空'));
+        return cb(new Error('用户名不能为空'));
     }
-    const reg = RegMap.authCode;
+    const reg = RegMap.username;
     if(!reg.test(value)) {
-        return new cb(new Error('验证码格式不正确，应为6位数字'))
+        return new cb(new Error('用户名格式不正确，应为5位小写英文字母'))
     } else {
         cb();
     }

@@ -3,26 +3,22 @@ import { SUCCESS_CODE } from '@/common/constants/code';
 import { IRootState } from './../rootState.interface';
 import {
     IRegisterData,
-    IBindUserInfo
+    IBindUserInfo,
+    IResponseFormat,
+    ILoginResponseData
 } from '@/interfaces';
 import { ActionTree } from 'vuex';
 import * as types from './mutationTypes';
-import AJAX from '@/utlis/ajax';
-import axios from 'axios'
+import AJAX, { IAxiosResponse } from '@/utlis/ajax';
 
 const $http = new AJAX();
 
 export const actions: ActionTree<ISigninState, IRootState> = {
-    handleInput(context, payload: { newModel: IBindUserInfo }) {
-        console.log('handleInput: ', payload.newModel)
-        context.commit(types.INPUT_USER_INFO, { 
-            newModel: payload.newModel 
-        })
-    },
     /** 针对记住密码以后自动填充用户名密码时更新 state 里面的数据
      * 
      */
     autoFillUserInfo(context, payload: { userInfo: IBindUserInfo }) {
+        console.log(payload.userInfo);
         context.commit(types.AUTO_FILL_USERINFO, {
             userInfo: payload.userInfo
         })
@@ -32,16 +28,21 @@ export const actions: ActionTree<ISigninState, IRootState> = {
      *  @param{IBindUserInfo} data 登录信息(用户名密码)
      */
     async handleUserLogin(context, payload: { data: IBindUserInfo }) {
-        let res;
+        console.log('login')
+        let res: IAxiosResponse<IResponseFormat<ILoginResponseData>>;
         try {
             res = await $http.post('/user/login', payload.data);
         } catch (error) {
             // TODO: 封装错误类
             throw Error(`request Error: ${error}`);
         }
-        if(res.status === SUCCESS_CODE) {
-            // TODO: 处理跳转逻辑
-        }
+        return new Promise((resolve, reject) => {
+            if(res.status === SUCCESS_CODE) {
+                resolve(1)
+            } else {
+                reject(0);
+            }
+        })
     },
 
     async handleInfoSubmit(context, payload: { data: IRegisterData<string> }) {
@@ -59,7 +60,6 @@ export const actions: ActionTree<ISigninState, IRootState> = {
                 password: copy.password,
                 phoneNumber: copy.phone,
                 roleId: copy.identity === 'teacher' ? 0 : 1,
-                smsCode: Number(copy.authCode)
             });
             console.log(res);
         } catch (error) {
@@ -75,15 +75,4 @@ export const actions: ActionTree<ISigninState, IRootState> = {
             registerData: payload.registerData
         })
     },
-
-    async handleSendCode(context, payload: { phoneNumber: string }) {
-        const { phoneNumber } = payload;
-        try {
-            const res = await $http.post('/user/sms', {
-                phoneNumber
-            });
-        } catch (error) {
-            
-        }
-    }
 }

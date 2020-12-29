@@ -1,10 +1,16 @@
 import { 
+    checkSearchCourse,
+    checkAddName,
+    checkGender,
+    checkGrade
+} from './home';
+import { 
     checkEmployeeId,
     checkPassword,
     checkConfirmPassword,
     checkPhoneNumber,
-    checkAuthCode,
-    checkStudentId
+    checkStudentId,
+    checkAdminUsername
  } from './signin';
 
 const SigninRules: any = {
@@ -13,6 +19,10 @@ const SigninRules: any = {
     ],
     studentId: [
         { validator: checkStudentId, trigger: 'change' }
+    ],
+    /** 管理员登录用户名 */
+    username: [
+        { validator: checkAdminUsername, trigger: 'change' }
     ],
     // 教师登录密码
     tPassword: [
@@ -31,12 +41,31 @@ const SigninRules: any = {
     ],
     phone: [
         { validator: checkPhoneNumber , trigger: 'change' }
+    ]
+}
+
+const HomeRules: any = {
+    // 查询成绩关键字 => 课程
+    courseId: [
+        { validator: checkSearchCourse, trigger: 'change' }
     ],
-    authCode: [
-        { validator: checkAuthCode, trigger: 'change' }
+    // 查询课程关键字 => 学号
+    studentId: [
+        { validator: checkStudentId, trigger: 'change' }
+    ],
+    // 查询姓名
+    name: [
+        { validator: checkAddName, trigger: 'change' }
+    ],
+    gender: [
+        { validator: checkGender, trigger: 'change' }
+    ],
+    grade: [
+        { validator: checkGrade, trigger: 'change' }
     ]
 }
 
 export {
-    SigninRules
+    SigninRules,
+    HomeRules
 };

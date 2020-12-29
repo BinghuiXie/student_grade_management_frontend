@@ -33,8 +33,7 @@ export default class Signin extends mixins(Lang) {
         studentId: '',
         password: '',
         phone: '',
-        identity: 'teacher',
-        authCode: '',
+        identity: 0,
         confirmPass: ''
     };
 

@@ -7,28 +7,6 @@
             width: 100%;
         }
         .el-form-item{
-            &.el-form-item__code{
-                .el-form-item__content {
-                    display: flex;
-                    .register-item__input{
-                        input {
-                            border-top-right-radius: 0;
-                            border-bottom-right-radius: 0;
-                            border-right-color: $theme_color;
-                            border-right: none;
-                        }
-                    }
-                    .register-item__send-code{
-                        border-top-left-radius: 0;
-                        border-bottom-left-radius: 0;
-                        &:not(.is-disabled){
-                            background-color: $theme_color;
-                            border: none;
-                        }
-                    }
-                }
-                
-            }
             &.el-form-item__button{
                 button {
                     width: 100%;

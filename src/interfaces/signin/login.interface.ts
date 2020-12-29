@@ -1,5 +1,5 @@
 export interface IBaseInfo {
-    [key: string]: string;
+    [key: string]: any;
 }
 
 export interface IStudentInfo extends IBaseInfo {
@@ -12,4 +12,20 @@ export interface ITeacherInfo extends IBaseInfo {
     tPassword: string;
 }
 
-export type IBindUserInfo = ITeacherInfo | IStudentInfo;
+export interface IAdminInfo extends IBaseInfo {
+    username: string;
+    password: string;
+}
+
+export interface IUserInfo extends IBaseInfo {
+    teacherInfo: ITeacherInfo;
+    studentInfo: IStudentInfo;
+    adminInfo: IAdminInfo;
+}
+
+// login 返回的数据中 data 的格式
+export interface ILoginResponseData {
+    sessionId: string;
+}
+
+export type IBindUserInfo = ITeacherInfo | IStudentInfo | IAdminInfo;

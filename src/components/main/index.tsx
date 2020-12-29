@@ -1,14 +1,12 @@
-import { Component, Vue } from 'vue-property-decorator';
-import Header from '@/components/common/header';
+import { Component } from 'vue-property-decorator';
+import { mixins } from 'vue-class-component';
+import Lang from '@/lang/lang';
 
 import './style.scss';
+import { SYSTEM_TITLE, SYSTEM_INTRO } from '@/common/constants';
 
-@Component({
-    components: {
-        Header
-    }
-})
-export default class Main extends Vue {
+@Component
+export default class Main extends mixins(Lang) {
 
     enterSystem() {
         this.$router.push('/portal');
@@ -26,8 +24,10 @@ export default class Main extends Vue {
                         </div>
                     </div>
                     <div class='main-container__info'>
-                        <div class='title'>南邮智能组卷系统</div>
-                        <div class='description'>基于能力体系和知识体系的试题库及智能组卷系统</div>
+                        <div class='title'>{ this.t(SYSTEM_TITLE) }</div>
+                        <div class='description'>
+                            { this.t(SYSTEM_INTRO) }
+                        </div>
                         <div class='button'>
                             <el-button 
                                 type='primary'

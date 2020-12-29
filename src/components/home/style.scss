@@ -1,0 +1,42 @@
+@import '@/vars.scss';
+
+.home-container{
+    height: 100vh;
+    .el-container{
+        height: 100%;
+        .el-header{
+            padding: 0;
+            display: flex;
+            box-sizing: border-box;
+            border-bottom: 1px solid #eeeeee;
+            .el-header__left{
+                width: 200px;
+                background-color: $theme_color;
+                text-align: center;
+                line-height: 60px;
+                color: #ffffff;
+            }
+            .el-header__right{
+                flex: 1;
+            }
+        }
+        & > .el-container{
+            flex: 1;
+            .el-aside{
+                box-sizing: border-box;
+                border-right: 1px solid #eeeeee;
+                padding: 12px 0;
+                .el-aside__item{
+                    text-align: center;
+                    font-size: 14px;
+                    line-height: 4;
+                    user-select: none;
+                    &:hover{
+                        cursor: pointer;
+                        background-color: #eeeeee;
+                    }
+                }
+            }
+        }
+    }
+}

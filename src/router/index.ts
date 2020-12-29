@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Signin from '@/components/signin';
-import Portal from '@/components/portal';
 import Main from '@/components/main';
-import { component } from 'vue/types/umd';
+import Home from '@/components/home';
+import GradeSearch from '@/components/home/gradeSearch';
+import GradeManage from '@/components/home/gradeManage';
 
 Vue.use(VueRouter)
 
@@ -13,11 +14,15 @@ const routes: Array<RouteConfig> = [
     component: Signin
   },
   {
-    path: '/portal',
-    component: Portal,
-    meta: {
-      requireAuth: true
-    }
+    path: '/home',
+    component: Home,
+    children: [
+      { path: 'search', component: GradeSearch },
+      { path: 'manage', component: GradeManage },
+      { path: 'teacher-manager', component: GradeManage },
+      { path: 'student-manager', component: GradeManage },
+      { path: 'lesson-manager', component: GradeManage },
+    ]
   },
   {
     path: '/',

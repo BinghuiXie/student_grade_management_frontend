@@ -1,0 +1,39 @@
+@import '@/vars.scss';
+
+.grade-search {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .grade-search__content{
+        flex: 1;
+        position: relative;
+        .grade-search__content-box{
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            width: 520px;
+            height: 360px;
+            .el-form{
+                .el-form-item{
+                    display: flex;
+                    .el-form-item__content{
+                        flex: 1;
+                        .el-select{
+                            width: 100%;
+                        }
+                        .el-button{
+                            width: 120px;
+                            &.el-button--primary{
+                                border: none;
+                                background-color: $theme_color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

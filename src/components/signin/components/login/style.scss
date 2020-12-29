@@ -1,38 +1,13 @@
 @import '@/vars.scss';
 
 .login-wrapper{
-    .login-wrapper_switch-identity{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 16px 0;
-        .switch-identity-box {
-            overflow: hidden;
-            height: 18px;
-            ul {
-                transition: all .3s;
-                .switch-identity-item {
-                    line-height: 1;
-                    padding: 2px 0;
-                    font-size: 14px;
-                    user-select: none;
-                    color: $default_font_color;
-                }
-            }
-        }
-        .icon-switch{
-            font-weight: 200;
-            color: $theme_color;
-            transition: all .5s;
-            &:hover{
-                cursor: pointer;
-            }
-        }
-    }
     .login-el-form{
+        margin-top: 16px;
         .login-el-form-item{
-            &:nth-of-type(1) {
-                margin-bottom: 0;
+            &.select-identity{
+                .el-select{
+                    width: 100%;
+                }
             }
             &.password__content{
                 margin-bottom: 8px;

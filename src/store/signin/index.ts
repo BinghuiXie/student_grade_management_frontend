@@ -14,15 +14,18 @@ const state: ISigninState = {
     studentId: '',
     sPassword: ''
   },
+  adminInfo: {
+    username: '',
+    password: ''
+  },
   // 注册信息
   registerData: {
     employeeId: '',
     studentId: '',
     password: '',
     confirmPass: '',
-    identity: 'teacher',
-    phone: '',
-    authCode: ''
+    identity: 0,
+    phone: ''
   }
 }
 

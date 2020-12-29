@@ -7,21 +7,16 @@ import {
     INPUT_PASSWPRD,
     CONFIRM_PASSWORD,
     INPUT_PHONE_NUMER,
-    INPUT_AUTH_CODE,
-    SEND_AUTH_CODE,
     REGISTER_NOW,
     INPUT_STUDENT_ID,
     BACK_TO_LOGIN,
-    TEACHER,
-    STUDENT,
     MAX_EMPLOYEE_ID_LENGTH,
     MAX_PASSWORD_LENGTH,
     MIN_PASSWORD_LENGTH,
     MAX_STUDENT_ID_LENGTH,
-    ERROR_MESSAGE
+    IDENTITY,
 } from '@/common/constants';
-import { 
-    IRegisterIdentity, 
+import {
     IRegisterData
 } from '@/interfaces';
 import Lang from '@/lang/lang';
@@ -40,18 +35,16 @@ export default class RegisterWrapper extends mixins(Lang) {
     }
 
     public get userId() {
-        return this.model.identity === STUDENT ? this.model.studentId : this.model.employeeId;
+        return this.model.identity === IDENTITY.STUDENTID ? this.model.studentId : this.model.employeeId;
     }
 
     public set userId(newValue) {
-        if(this.model.identity === STUDENT) {
+        if(this.model.identity === IDENTITY.STUDENTID) {
             this.model.studentId = newValue;
         } else {
             this.model.employeeId = newValue;
         }
     }
-
-    public isSendCode: boolean = false;
 
     public $refs!: {
         registerForm: Vue & { 
@@ -66,37 +59,11 @@ export default class RegisterWrapper extends mixins(Lang) {
     handleInfoSubmit(payload: { data: IRegisterData<string>}) {
     }
 
-    @Action('handleSendCode')
-    handleSendCode(payload: { phoneNumber: string }) {}
-
     @Action('updateRegisterData')
     public updateRegisterData(payload: { registerData: IRegisterData<string> }) {}
 
     handleInput() {
         this.updateRegisterData({ registerData: this.model });
-    }
-
-    sendAuthCode(e: MouseEvent) {
-        const button = e.target as HTMLButtonElement;
-        let time = 60;
-        if(!this.registerData.phone) {
-            this.$message.error(this.t(ERROR_MESSAGE.NOT_INPUT_PHONE_NUMER))
-        } else {
-            this.isSendCode = true;
-            button.innerText = `重新发送(${String(time)}s)`;
-            this.handleSendCode({ phoneNumber: this.registerData.phone });
-            if(button) {
-                const timer = setInterval(() => {
-                    time--;
-                    button.innerText = `重新发送(${String(time)}s)`;
-                    if(+time <= 0) {
-                        clearInterval(timer);
-                        this.isSendCode = false;
-                        button.innerText = this.t(SEND_AUTH_CODE);
-                    }
-                }, 1000);
-            }
-        }
     }
 
     handleRegister() {
@@ -125,18 +92,18 @@ export default class RegisterWrapper extends mixins(Lang) {
                             v-model={this.model.identity}
                             onChange={this.handleInput}
                         >
-                            <el-option label='教师' value={TEACHER}></el-option>
-                            <el-option label='学生' value={STUDENT}></el-option>
+                            <el-option label='教师' value={IDENTITY.TEACHERID}></el-option>
+                            <el-option label='学生' value={IDENTITY.STUDENTID}></el-option>
                         </el-select>
                     </el-form-item>
-                    <el-form-item prop={ this.model.identity === STUDENT ? 'studentId': 'employeeId' }>
+                    <el-form-item prop={ this.model.identity === IDENTITY.STUDENTID ? 'studentId': 'employeeId' }>
                         <el-input
-                            maxlength={ this.model.identity === STUDENT ? MAX_STUDENT_ID_LENGTH : MAX_EMPLOYEE_ID_LENGTH}
+                            maxlength={ this.model.identity === IDENTITY.STUDENTID ? MAX_STUDENT_ID_LENGTH : MAX_EMPLOYEE_ID_LENGTH}
                             show-word-limit
                             v-model={this.userId}
                             onInput={this.handleInput}
                             placeholder={ 
-                                this.model.identity === STUDENT 
+                                this.model.identity === IDENTITY.STUDENTID
                                 ? this.t( INPUT_STUDENT_ID )
                                 : this.t( INPUT_EMPLOYEE_ID ) 
                             }
@@ -170,22 +137,6 @@ export default class RegisterWrapper extends mixins(Lang) {
                             v-model={this.model.phone}
                             placeholder={ this.t( INPUT_PHONE_NUMER ) }
                         ></el-input>
-                    </el-form-item>
-                    <el-form-item class='el-form-item__code' prop='authCode'>
-                        <el-input
-                            onInput={this.handleInput}
-                            v-model={this.model.authCode}
-                            placeholder={ this.t( INPUT_AUTH_CODE ) } 
-                            class='register-item__input'
-                        ></el-input>
-                        <el-button 
-                            type='primary' 
-                            class='register-item__send-code'
-                            onclick={this.sendAuthCode}
-                            disabled={this.isSendCode}
-                        >
-                            { this.t( SEND_AUTH_CODE ) }
-                        </el-button>
                     </el-form-item>
                     <el-form-item class='el-form-item__button'>
                         <el-button 

@@ -1,6 +1,6 @@
 export const modules = [
     {
-        title: '课程管理',
+        title: '成绩查询',
         intro: '针对课程知识体系、能力体系、试题库等的管理和建设',
         identityLabel: '教师',
         imgUrl: 'https://static.runoob.com/images/demo/demo2.jpg'
