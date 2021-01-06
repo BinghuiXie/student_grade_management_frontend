@@ -17,6 +17,7 @@ export const STUDENT_ID = 'studentId';
 export const TEACHER_ID = 'employeeId';
 export const STUDENT_PASSWORD = 'sPassword';
 export const TEACHER_PASSWORD = 'tPassword';
+export const JWT_KEY = 'token';
 
 export const infoConstant = {
     0: {

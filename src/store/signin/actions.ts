@@ -1,10 +1,12 @@
+import { INFINITY_TIME } from './../../common/constants/time';
+import { JWT_KEY } from './../../common/constants/siginin';
+import Storage from '@/utlis/localStorage';
 import { ISigninState } from './signin.interface';
 import { SUCCESS_CODE } from '@/common/constants/code';
 import { IRootState } from './../rootState.interface';
 import {
     IRegisterData,
     IBindUserInfo,
-    IResponseFormat,
     ILoginResponseData
 } from '@/interfaces';
 import { ActionTree } from 'vuex';
@@ -12,6 +14,7 @@ import * as types from './mutationTypes';
 import AJAX, { IAxiosResponse } from '@/utlis/ajax';
 
 const $http = new AJAX();
+const $storage = new Storage()
 
 export const actions: ActionTree<ISigninState, IRootState> = {
     /** 针对记住密码以后自动填充用户名密码时更新 state 里面的数据
@@ -27,24 +30,31 @@ export const actions: ActionTree<ISigninState, IRootState> = {
      *  @param{Object} payload 参数
      *  @param{IBindUserInfo} data 登录信息(用户名密码)
      */
-    async handleUserLogin(context, payload: { data: IBindUserInfo }) {
-        console.log('login')
-        let res: IAxiosResponse<IResponseFormat<ILoginResponseData>>;
+    async handleUserLogin(context, payload: { data: IBindUserInfo }): Promise<ILoginResponseData> {
+        const { data } = payload;
+        let res: IAxiosResponse<ILoginResponseData>;
         try {
-            res = await $http.post('/user/login', payload.data);
+            res = await $http.post('/user/login', {
+                id: data.studentId || data.employeeId,
+                password: data.sPassword || data.tPassword
+            });
         } catch (error) {
             // TODO: 封装错误类
             throw Error(`request Error: ${error}`);
         }
-        return new Promise((resolve, reject) => {
-            if(res.status === SUCCESS_CODE) {
-                resolve(1)
-            } else {
-                reject(0);
-            }
-        })
+        const token = res.data.token;
+        console.log(token);
+        if(token) {
+            $storage.set(JWT_KEY, token, INFINITY_TIME)
+        }
+        return res.data;
     },
 
+    /**
+     * 处理用户注册
+     * @param context 
+     * @param payload 
+     */
     async handleInfoSubmit(context, payload: { data: IRegisterData<string> }) {
         // TODO: deep clone 封装在一个 utli 里面
         const copy = JSON.parse(JSON.stringify(payload.data));
@@ -61,7 +71,6 @@ export const actions: ActionTree<ISigninState, IRootState> = {
                 phoneNumber: copy.phone,
                 roleId: copy.identity === 'teacher' ? 0 : 1,
             });
-            console.log(res);
         } catch (error) {
             throw Error(`request Error: ${error}`);
         }

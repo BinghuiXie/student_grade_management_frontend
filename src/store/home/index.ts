@@ -6,7 +6,8 @@ const state: IIndexState = {
   searchInfo: {
       studentId: '',
       courseId: ''
-  }
+  },
+  courseData: []
 }
 
 export default {

@@ -1,4 +1,4 @@
-import { Component } from 'vue-property-decorator';
+import { Component, Watch } from 'vue-property-decorator';
 import { CreateElement } from 'vue';
 import { State, Action } from 'vuex-class';
 import { mixins } from 'vue-class-component';
@@ -8,13 +8,13 @@ import UserTable from '../userTable';
 import InfoDialog from '@/components/common/dialog';
 
 import './style.scss';
-import { ISelectInfo } from '@/interfaces';
+import { ISelectInfo, ICourseDataItem, IStudentGrade } from '@/interfaces';
 import { 
     studentGrade, 
-    studentGradeRowList,
-    courseInfo
+    studentGradeRowList
 } from '@/common/mock';
 import { asideList } from '@/common/mock/asideList';
+import { rowTitleMapList } from '@/common/constants';
 
 @Component({
     components: { 
@@ -25,11 +25,42 @@ import { asideList } from '@/common/mock/asideList';
 })
 export default class GradeManage extends mixins(Lang) {
 
+    @Action('getRealModuleData')
+    public getRealData!: ( payload: { id: number } ) => Promise<any>
+
+    @Action('getCourseList')
+    public getCourseList!: () => void
+
+    @State(state => state.home.courseData)
+    courseInfo!: Array<ICourseDataItem>;
+
+    @Watch('$route')
+    routeChange(to: any, from: any) {
+        this.getData();
+    }
+
+    public get courseList() {
+        if(this.courseInfo) {
+            return this.courseInfo
+        }
+        return [];
+    }
+
     public selectInfo: ISelectInfo = {
         courseId: ''
     }
 
     public dialogVisible: boolean = false;
+
+    public tableData: any[] = [];
+
+    public rowTitleList: any[] = [];
+
+    public tableFilterData: any[] | string = '';
+
+    public get moduleId() {
+        return Number(this.$route.query.module as string)
+    }
 
     public renderTitle(h: CreateElement) {
         if(this.$route.query.module) {
@@ -47,14 +78,20 @@ export default class GradeManage extends mixins(Lang) {
         this.dialogVisible = false;
     }
 
+    public updateAlterData(newData: IStudentGrade, rowIndex: number) {
+        console.log('newData: ', newData)
+        this.tableData.splice(rowIndex, 1, newData);
+    }
+
     public renderUserTable(h: CreateElement) {
         return h(this.$options.components!['UserTable'], {
             props: {
-                tableData: studentGrade,
-                rowData: studentGradeRowList
+                tableData: this.tableFilterData || this.tableData,
+                rowData: this.rowTitleList
             },
             on: {
-                handleDeleteRow: this.handleDeleteRow
+                handleDeleteRow: this.handleDeleteRow,
+                updateAlterData: this.updateAlterData
             }
         })
     }
@@ -90,12 +127,29 @@ export default class GradeManage extends mixins(Lang) {
         // 删除数据库中的数据
     }
 
+    public handleSelectChange(value: any) {
+        this.tableFilterData = this.tableData.filter(rowData => rowData.courseName === value)
+    }
+
     public addStudentGrade() {
         this.dialogVisible = true;
     }
 
-    public created() {
+    public async getData() {
+        const res = await this.getRealData({ id: this.moduleId });
+        this.tableData = res.data;
+        const moduleRowObj = rowTitleMapList.find(item => item.module === this.moduleId);
+        if(moduleRowObj) {
+            this.rowTitleList = moduleRowObj.titleList;
+        }
+    }
 
+    public async created() {
+        /* 获取真实数据 */
+        if(this.courseList.length === 0) {
+            await this.getCourseList();
+        }
+        this.getData();
     }
 
     render(h: CreateElement) {
@@ -116,23 +170,28 @@ export default class GradeManage extends mixins(Lang) {
                         <el-main>
                             <div class='el-main__header'>
                                 <el-form>
-                                    <el-form-item label='请选择课程' class='el-main__header-select'>
-                                        <el-select
-                                            v-model={this.selectInfo.courseId}
-                                        >
-                                            {
-                                                courseInfo.map(courseItem => {
-                                                    return (
-                                                        <el-option
-                                                            label={courseItem.courseName}
-                                                            value={courseItem.id}
-                                                            key={courseItem.id}
-                                                        ></el-option>
-                                                    )
-                                                })
-                                            }
-                                        </el-select>
-                                    </el-form-item>
+                                    {
+                                        this.moduleId === 0 ?
+                                        <el-form-item label='请选择课程' class='el-main__header-select'>
+                                            <el-select
+                                                onchange={this.handleSelectChange}
+                                                v-model={this.selectInfo.courseId}
+                                            >
+                                                {
+                                                    this.courseList.map((courseItem: ICourseDataItem) => {
+                                                        return (
+                                                            <el-option
+                                                                label={courseItem.courseName}
+                                                                value={courseItem.courseName}
+                                                                key={courseItem.courseCode}
+                                                            ></el-option>
+                                                        )
+                                                    })
+                                                }
+                                            </el-select>
+                                        </el-form-item>
+                                        : null
+                                    }
                                     <el-form-item>
                                         <el-button 
                                             type='primary'

@@ -39,7 +39,6 @@ export const checkGrade = (rule: any, value: string, cb: any) => {
     if(!value) {
         return cb(new Error('成绩不能为空!'))
     }
-    console.log(value, Number(value))
     if(Number(value) > 100 || Number(value) < 0) {
         return cb(new Error('成绩应在0-100之间'))
     } else {

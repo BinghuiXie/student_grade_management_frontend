@@ -1,5 +1,6 @@
-import { ISearchKeyInfo } from '@/interfaces';
+import { ISearchKeyInfo, ICourseDataItem } from '@/interfaces';
 
 export interface IIndexState {
-    searchInfo: ISearchKeyInfo
+    searchInfo: ISearchKeyInfo,
+    courseData: Array<ICourseDataItem>
 }

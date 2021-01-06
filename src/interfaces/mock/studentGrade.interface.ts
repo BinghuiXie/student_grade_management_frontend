@@ -16,5 +16,5 @@ export interface IStudentGrade {
     normalGrade: number;
     makeupGrade: number;
     resetGrade: number;
-    courseId: number;
+    courseName: string;
 }

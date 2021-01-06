@@ -3,10 +3,11 @@ import { Action } from 'vuex-class';
 import { mixins } from 'vue-class-component';
 import { HomeRules } from '@/components/signin/rules';
 import Lang from '@/lang/lang';
-import { IRowHeader } from '@/interfaces';
+import { IRowHeader, IStudentGrade } from '@/interfaces';
 
 import './style.scss';
 import { isInputMatchRules } from '@/utlis';
+import { AxiosResponse } from 'axios';
 
 @Component
 export default class InfoDialog extends mixins(Lang) {
@@ -33,8 +34,14 @@ export default class InfoDialog extends mixins(Lang) {
     @Prop()
     public dialogTitle!: string;
 
+    @Prop()
+    public rowIndex!: number;
+
     @Emit('closeDialog')
     public closeDialog() {}
+
+    @Emit('updateModuleData')
+    public updateTableData(res: IStudentGrade, rowIndex: number) {}
 
     @Watch('alterData', { deep: true })
     onModelChange(newVal: any, oldVal: any){
@@ -42,12 +49,16 @@ export default class InfoDialog extends mixins(Lang) {
     }
 
     @Action('handleChangeInfo')
-    handleChangeInfo!: (payload: { data: any }) => void
+    handleChangeInfo!: (payload: { data: any, id: number }) => Promise<IStudentGrade>
 
     public $refs!: {
         dialogForm: Vue & {
             validate: (param: any) => void
         }
+    }
+
+    public get moduleId() {
+        return Number(this.$route.query.module as string)
     }
 
     public model = {
@@ -58,9 +69,17 @@ export default class InfoDialog extends mixins(Lang) {
         ...this.alterData
     }
 
-    public confirmDialog() {
+    public async confirmDialog() {
         if(isInputMatchRules(this.$refs, 'dialogForm')) {
-            this.handleChangeInfo({ data: this.model })
+            const res = await this.handleChangeInfo({ data: this.model, id: this.moduleId });
+            console.log('alterRes: ', res);
+            if(res) {
+                this.updateTableData(res, this.rowIndex);
+                this.closeDialog();
+            } else {
+                // TODO: 修改失败
+                this.$message.error('修改数据失败');
+            }
         }
     }
 
@@ -79,14 +98,11 @@ export default class InfoDialog extends mixins(Lang) {
     public renderFormItem() {
         return [...this.rowList].map((item: IRowHeader) => {
             const rowName = item.rowName + ': ';
-            const label = this.operateType ? item.addible ? rowName : '' : rowName;
             return (
-                <el-form-item label={label} prop={item.key}>
+                <el-form-item label={rowName} prop={item.key}>
                     {
                         this.operateType
                         ? this.renderFormAddItem(item, item.key)
-                        : item.readonly
-                        ? <p>{this.model[item.key]}</p> 
                         : <el-input v-model={this.model[item.key]}></el-input>
                     }
                 </el-form-item>
@@ -95,24 +111,19 @@ export default class InfoDialog extends mixins(Lang) {
     }
 
     public renderFormAddItem(data: IRowHeader, key: string) {
-        if(data.addible) {
-            // 可添加
-            if(!data.isSelect) {
-                // 不需要选择
-                return <el-input v-model={this.addData[key]}></el-input>
-            } else if(data.selectOptions) {
-                return (
-                    <el-select v-model={this.addData[key]}>
-                        { 
-                            data.selectOptions.map((option: string) => (
-                                <el-option label={option} value={option}></el-option>
-                            ))
-                        }
-                    </el-select>
-                )
-            }
-        } else {
-            return null;
+        if(!data.isSelect) {
+            // 不需要选择
+            return <el-input v-model={this.addData[key]}></el-input>
+        } else if(data.selectOptions) {
+            return (
+                <el-select v-model={this.addData[key]}>
+                    {
+                        data.selectOptions.map((option: string) => (
+                            <el-option label={option} value={option}></el-option>
+                        ))
+                    }
+                </el-select>
+            )
         }
     }
 

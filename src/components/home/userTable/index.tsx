@@ -4,12 +4,11 @@ import { State, Action } from 'vuex-class';
 import { mixins } from 'vue-class-component';
 import Lang from '@/lang/lang';
 import InfoDialog from '@/components/common/dialog';
-import { IUserItemData, IUserTableData, IRowData } from '@/interfaces';
+import { IUserItemData, IUserTableData, IRowData, IStudentGrade } from '@/interfaces';
 
 import './style.scss';
 import { ALTER } from '@/common/constants';
 import { getMockData } from '@/utlis/mock';
-import { courseInfo } from '@/common/mock';
 
 @Component({
     components: {
@@ -25,9 +24,10 @@ export default class UserTable extends mixins(Lang) {
     rowData!: IRowData;
 
     @Emit('handleDeleteRow')
-    handleDeleteRow(payload: { rowIndex: number }) {
-        
-    }
+    public handleDeleteRow(payload: { rowIndex: number }) {}
+
+    @Emit('updateAlterData')
+    public updateModuleData(newData: IStudentGrade, rowIndex: number) {}
 
     public showDialog: boolean = false;
 
@@ -68,12 +68,14 @@ export default class UserTable extends mixins(Lang) {
             props: {
                 dialogVisible: this.showDialog,
                 alterData: this.alterData,
+                rowIndex: this.alterData ? this.alterData.rowIndex : 0,
                 rowList: this.rowData,
                 dialogTitle: '修改学生成绩',
                 operateType: 0
             },
             on: {
-                closeDialog: this.closeDialog
+                closeDialog: this.closeDialog,
+                updateModuleData: this.updateModuleData
             }
         })
     }
@@ -99,7 +101,7 @@ export default class UserTable extends mixins(Lang) {
                         this.isDataValid && this.rowData.map((data: IUserItemData, index: number) => {
                             return (
                                 <el-table-column
-                                    prop={this.dataKeys[index]}
+                                    prop={this.dataKeys.find(key => key === data.key)}
                                     label={this.rowData[index].rowName}
                                 />
                             )

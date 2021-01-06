@@ -1,0 +1,178 @@
+Date : 2020-12-30 10:29:43
+Directory : /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management
+Total : 109 files,  3681 codes, 184 comments, 304 blanks, all 4169 lines
+
+Languages
++------------------+------------+------------+------------+------------+------------+
+| language         | files      | code       | comment    | blank      | total      |
++------------------+------------+------------+------------+------------+------------+
+| TypeScript       |         72 |      1,480 |        129 |        107 |      1,716 |
+| TypeScript React |         14 |      1,139 |         37 |        150 |      1,326 |
+| SCSS             |         12 |        474 |          1 |         12 |        487 |
+| XML              |          4 |        419 |          3 |         11 |        433 |
+| JSON             |          2 |         64 |         11 |          2 |         77 |
+| Markdown         |          1 |         45 |          0 |         14 |         59 |
+| CSS              |          1 |         24 |          0 |          6 |         30 |
+| JavaScript       |          2 |         20 |          2 |          1 |         23 |
+| HTML             |          1 |         16 |          1 |          1 |         18 |
++------------------+------------+------------+------------+------------+------------+
+
+Directories
++-----------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                                    | files      | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                                       |        109 |      3,681 |        184 |        304 |      4,169 |
+| public                                                                                                                                  |          1 |         16 |          1 |          1 |         18 |
+| src                                                                                                                                     |        103 |      3,536 |        170 |        286 |      3,992 |
+| src/common                                                                                                                              |         18 |        699 |          1 |         15 |        715 |
+| src/common/constants                                                                                                                    |          8 |        130 |          1 |          4 |        135 |
+| src/common/mock                                                                                                                         |          8 |        555 |          0 |          8 |        563 |
+| src/common/regexp                                                                                                                       |          2 |         14 |          0 |          3 |         17 |
+| src/components                                                                                                                          |         28 |      2,096 |         57 |        167 |      2,320 |
+| src/components/assets                                                                                                                   |          3 |        397 |          0 |          0 |        397 |
+| src/components/common                                                                                                                   |          2 |        131 |         13 |         18 |        162 |
+| src/components/common/dialog                                                                                                            |          2 |        131 |         13 |         18 |        162 |
+| src/components/home                                                                                                                     |         10 |        570 |          9 |         52 |        631 |
+| src/components/home/gradeManage                                                                                                         |          2 |        189 |          4 |         16 |        209 |
+| src/components/home/gradeSearch                                                                                                         |          2 |        152 |          2 |         10 |        164 |
+| src/components/home/title                                                                                                               |          2 |         25 |          0 |          4 |         29 |
+| src/components/home/userTable                                                                                                           |          2 |        109 |          3 |         15 |        127 |
+| src/components/main                                                                                                                     |          2 |        140 |          0 |          5 |        145 |
+| src/components/signin                                                                                                                   |         11 |        858 |         35 |         92 |        985 |
+| src/components/signin/components                                                                                                        |          6 |        556 |         15 |         66 |        637 |
+| src/components/signin/components/canvas                                                                                                 |          1 |         65 |          2 |         14 |         81 |
+| src/components/signin/components/login                                                                                                  |          3 |        314 |         13 |         37 |        364 |
+| src/components/signin/components/login/identityInput                                                                                    |          1 |        188 |         13 |         29 |        230 |
+| src/components/signin/components/register                                                                                               |          2 |        177 |          0 |         15 |        192 |
+| src/components/signin/rules                                                                                                             |          3 |        177 |         20 |         14 |        211 |
+| src/fonts                                                                                                                               |          2 |         46 |          3 |         17 |         66 |
+| src/interfaces                                                                                                                          |         23 |        182 |         58 |         21 |        261 |
+| src/interfaces/canvas                                                                                                                   |          2 |         13 |          3 |          1 |         17 |
+| src/interfaces/home                                                                                                                     |          4 |         37 |         20 |          6 |         63 |
+| src/interfaces/mock                                                                                                                     |          8 |         68 |         31 |          7 |        106 |
+| src/interfaces/signin                                                                                                                   |          4 |         40 |          4 |          7 |         51 |
+| src/interfaces/storage                                                                                                                  |          2 |          7 |          0 |          0 |          7 |
+| src/lang                                                                                                                                |          3 |         39 |          0 |          4 |         43 |
+| src/router                                                                                                                              |          1 |         48 |          1 |          6 |         55 |
+| src/store                                                                                                                               |         13 |        194 |         28 |         23 |        245 |
+| src/store/home                                                                                                                          |          5 |         45 |         15 |          9 |         69 |
+| src/store/signin                                                                                                                        |          6 |        132 |         13 |         10 |        155 |
+| src/types                                                                                                                               |          1 |          4 |          0 |          0 |          4 |
+| src/utlis                                                                                                                               |          8 |        118 |         19 |         18 |        155 |
++-----------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-----------------------------------------------------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| filename                                                                                                                                | language         | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/README.md                                                      | Markdown         |         45 |          0 |         14 |         59 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/babel.config.js                                                | JavaScript       |          5 |          0 |          1 |          6 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/package.json                                                   | JSON             |         34 |          0 |          1 |         35 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/public/index.html                                              | HTML             |         16 |          1 |          1 |         18 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/App.tsx                                                    | TypeScript React |         16 |          0 |          3 |         19 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/constants/code.ts                                   | TypeScript       |          1 |          0 |          0 |          1 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/constants/errMessage.ts                             | TypeScript       |          4 |          0 |          0 |          4 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/constants/home.ts                                   | TypeScript       |          7 |          0 |          1 |          8 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/constants/index.ts                                  | TypeScript       |          7 |          0 |          0 |          7 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/constants/lang.ts                                   | TypeScript       |         19 |          0 |          1 |         20 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/constants/modules.ts                                | TypeScript       |         38 |          0 |          0 |         38 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/constants/siginin.ts                                | TypeScript       |         53 |          1 |          2 |         56 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/constants/time.ts                                   | TypeScript       |          1 |          0 |          0 |          1 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/mock/asideList.ts                                   | TypeScript       |         33 |          0 |          0 |         33 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/mock/college-info.ts                                | TypeScript       |         18 |          0 |          1 |         19 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/mock/course-info.ts                                 | TypeScript       |         43 |          0 |          1 |         44 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/mock/index.ts                                       | TypeScript       |          7 |          0 |          1 |          8 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/mock/major-info.ts                                  | TypeScript       |         18 |          0 |          1 |         19 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/mock/student-grade.ts                               | TypeScript       |        168 |          0 |          2 |        170 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/mock/student-info.ts                                | TypeScript       |        111 |          0 |          1 |        112 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/mock/tacher-info.ts                                 | TypeScript       |        157 |          0 |          1 |        158 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/regexp/index.ts                                     | TypeScript       |          5 |          0 |          2 |          7 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/regexp/signin.ts                                    | TypeScript       |          9 |          0 |          1 |         10 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/assets/login_bg.svg                             | XML              |        101 |          0 |          0 |        101 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/assets/main_01.svg                              | XML              |         98 |          0 |          0 |         98 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/assets/main_02.svg                              | XML              |        198 |          0 |          0 |        198 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/common/dialog/index.tsx                         | TypeScript React |        118 |         13 |         18 |        149 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/common/dialog/style.scss                        | SCSS             |         13 |          0 |          0 |         13 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/home/gradeManage/index.tsx                      | TypeScript React |        140 |          4 |         15 |        159 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/home/gradeManage/style.scss                     | SCSS             |         49 |          0 |          1 |         50 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/home/gradeSearch/index.tsx                      | TypeScript React |        114 |          2 |          9 |        125 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/home/gradeSearch/style.scss                     | SCSS             |         38 |          0 |          1 |         39 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/home/index.tsx                                  | TypeScript React |         54 |          0 |          6 |         60 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/home/style.scss                                 | SCSS             |         41 |          0 |          1 |         42 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/home/title/index.tsx                            | TypeScript React |         18 |          0 |          4 |         22 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/home/title/style.scss                           | SCSS             |          7 |          0 |          0 |          7 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/home/userTable/index.tsx                        | TypeScript React |        108 |          3 |         15 |        126 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/home/userTable/style.scss                       | SCSS             |          1 |          0 |          0 |          1 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/main/index.tsx                                  | TypeScript React |         39 |          0 |          4 |         43 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/main/style.scss                                 | SCSS             |        101 |          0 |          1 |        102 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/signin/components/canvas/index.tsx              | TypeScript React |         65 |          2 |         14 |         81 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/signin/components/login/identityInput/index.tsx | TypeScript React |        188 |         13 |         29 |        230 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/signin/components/login/index.tsx               | TypeScript React |         49 |          0 |          7 |         56 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/signin/components/login/style.scss              | SCSS             |         77 |          0 |          1 |         78 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/signin/components/register/index.tsx            | TypeScript React |        141 |          0 |         14 |        155 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/signin/components/register/style.scss           | SCSS             |         36 |          0 |          1 |         37 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/signin/index.tsx                                | TypeScript React |         81 |          0 |         11 |         92 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/signin/rules/home.ts                            | TypeScript       |         37 |          6 |          5 |         48 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/signin/rules/index.ts                           | TypeScript       |         61 |          7 |          3 |         71 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/signin/rules/signin.ts                          | TypeScript       |         79 |          7 |          6 |         92 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/signin/style.scss                               | SCSS             |         44 |          0 |          1 |         45 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/fonts/iconfont.css                                         | CSS              |         24 |          0 |          6 |         30 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/fonts/iconfont.svg                                         | XML              |         22 |          3 |         11 |         36 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/canvas/canvas.interface.ts                      | TypeScript       |         12 |          3 |          1 |         16 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/canvas/index.ts                                 | TypeScript       |          1 |          0 |          0 |          1 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/home/index.ts                                   | TypeScript       |          3 |          0 |          0 |          3 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/home/manage.interface.ts                        | TypeScript       |          3 |          0 |          0 |          3 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/home/search.interface.ts                        | TypeScript       |         14 |         11 |          2 |         27 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/home/usertable.interface.ts                     | TypeScript       |         17 |          9 |          4 |         30 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/http.interface.ts                               | TypeScript       |          5 |          0 |          0 |          5 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/index.ts                                        | TypeScript       |          7 |          0 |          0 |          7 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/mock/asideList.interface.ts                     | TypeScript       |          6 |          0 |          0 |          6 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/mock/collegeInfo.interface.ts                   | TypeScript       |          5 |          3 |          1 |          9 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/mock/courseInfo.interface.ts                    | TypeScript       |         14 |          3 |          2 |         19 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/mock/index.ts                                   | TypeScript       |          7 |          0 |          0 |          7 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/mock/majorInfo.interface.ts                     | TypeScript       |          5 |          8 |          1 |         14 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/mock/studentGrade.interface.ts                  | TypeScript       |          8 |         11 |          1 |         20 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/mock/studentInfo.interface.ts                   | TypeScript       |         12 |          3 |          1 |         16 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/mock/teacherInfo.interface.ts                   | TypeScript       |         11 |          3 |          1 |         15 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/ref.interface.ts                                | TypeScript       |          5 |          0 |          0 |          5 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/signin/index.ts                                 | TypeScript       |          3 |          0 |          0 |          3 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/signin/login.interface.ts                       | TypeScript       |         24 |          1 |          6 |         31 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/signin/register.interface.ts                    | TypeScript       |          8 |          3 |          1 |         12 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/signin/validate.interface.ts                    | TypeScript       |          5 |          0 |          0 |          5 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/storage/index.interface.ts                      | TypeScript       |          6 |          0 |          0 |          6 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/storage/index.ts                                | TypeScript       |          1 |          0 |          0 |          1 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/lang/index.ts                                              | TypeScript       |          4 |          0 |          1 |          5 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/lang/lang.tsx                                              | TypeScript React |          8 |          0 |          1 |          9 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/lang/zh_CN.ts                                              | TypeScript       |         27 |          0 |          2 |         29 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/main.ts                                                    | TypeScript       |         13 |          0 |          4 |         17 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/reset.scss                                                 | SCSS             |         64 |          1 |          5 |         70 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/router/index.ts                                            | TypeScript       |         48 |          1 |          6 |         55 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/shims-tsx.d.ts                                             | TypeScript       |         10 |          2 |          2 |         14 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/shims-vue.d.ts                                             | TypeScript       |          4 |          0 |          1 |          5 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/store/home/actions.ts                                      | TypeScript       |         23 |         15 |          3 |         41 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/store/home/home.interface.ts                               | TypeScript       |          4 |          0 |          1 |          5 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/store/home/index.ts                                        | TypeScript       |         14 |          0 |          2 |         16 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/store/home/mutationType.ts                                 | TypeScript       |          0 |          0 |          1 |          1 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/store/home/mutations.ts                                    | TypeScript       |          4 |          0 |          2 |          6 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/store/index.ts                                             | TypeScript       |         11 |          0 |          3 |         14 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/store/rootState.interface.ts                               | TypeScript       |          6 |          0 |          1 |          7 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/store/signin/actions.ts                                    | TypeScript       |         68 |         10 |          4 |         82 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/store/signin/getters.ts                                    | TypeScript       |          5 |          0 |          2 |          7 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/store/signin/index.ts                                      | TypeScript       |         32 |          3 |          2 |         37 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/store/signin/mutationTypes.ts                              | TypeScript       |          3 |          0 |          0 |          3 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/store/signin/mutations.ts                                  | TypeScript       |         19 |          0 |          1 |         20 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/store/signin/signin.interface.ts                           | TypeScript       |          5 |          0 |          1 |          6 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/types/json.d.ts                                            | TypeScript       |          4 |          0 |          0 |          4 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/utlis/ajax.ts                                              | TypeScript       |         14 |          0 |          5 |         19 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/utlis/array.ts                                             | TypeScript       |         15 |          2 |          1 |         18 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/utlis/index.ts                                             | TypeScript       |          5 |          0 |          0 |          5 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/utlis/json.ts                                              | TypeScript       |         15 |          4 |          2 |         21 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/utlis/localStorage.ts                                      | TypeScript       |         36 |          5 |          7 |         48 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/utlis/mock.ts                                              | TypeScript       |          4 |          0 |          1 |          5 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/utlis/string.ts                                            | TypeScript       |          8 |          4 |          0 |         12 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/utlis/validate.ts                                          | TypeScript       |         21 |          4 |          2 |         27 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/vars.scss                                                  | SCSS             |          3 |          0 |          0 |          3 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/tsconfig.json                                                  | JSON             |         30 |         11 |          1 |         42 |
+| /Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/vue.config.js                                                  | JavaScript       |         15 |          2 |          0 |         17 |
+| Total                                                                                                                                   |                  |      3,681 |        184 |        304 |      4,169 |
++-----------------------------------------------------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+

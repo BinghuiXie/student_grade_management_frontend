@@ -1,0 +1,111 @@
+"filename", "language", "JSON", "Markdown", "HTML", "JavaScript", "TypeScript", "SCSS", "CSS", "XML", "TypeScript React", "comment", "blank", "total"
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/README.md", "Markdown", 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 14, 59
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/babel.config.js", "JavaScript", 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 1, 6
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/package.json", "JSON", 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 35
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/public/index.html", "HTML", 0, 0, 16, 0, 0, 0, 0, 0, 0, 1, 1, 18
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/App.tsx", "TypeScript React", 0, 0, 0, 0, 0, 0, 0, 0, 16, 0, 3, 19
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/constants/code.ts", "TypeScript", 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/constants/errMessage.ts", "TypeScript", 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/constants/home.ts", "TypeScript", 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 1, 8
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/constants/index.ts", "TypeScript", 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 7
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/constants/lang.ts", "TypeScript", 0, 0, 0, 0, 19, 0, 0, 0, 0, 0, 1, 20
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/constants/modules.ts", "TypeScript", 0, 0, 0, 0, 38, 0, 0, 0, 0, 0, 0, 38
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/constants/siginin.ts", "TypeScript", 0, 0, 0, 0, 53, 0, 0, 0, 0, 1, 2, 56
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/constants/time.ts", "TypeScript", 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/mock/asideList.ts", "TypeScript", 0, 0, 0, 0, 33, 0, 0, 0, 0, 0, 0, 33
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/mock/college-info.ts", "TypeScript", 0, 0, 0, 0, 18, 0, 0, 0, 0, 0, 1, 19
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/mock/course-info.ts", "TypeScript", 0, 0, 0, 0, 43, 0, 0, 0, 0, 0, 1, 44
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/mock/index.ts", "TypeScript", 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 1, 8
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/mock/major-info.ts", "TypeScript", 0, 0, 0, 0, 18, 0, 0, 0, 0, 0, 1, 19
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/mock/student-grade.ts", "TypeScript", 0, 0, 0, 0, 168, 0, 0, 0, 0, 0, 2, 170
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/mock/student-info.ts", "TypeScript", 0, 0, 0, 0, 111, 0, 0, 0, 0, 0, 1, 112
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/mock/tacher-info.ts", "TypeScript", 0, 0, 0, 0, 157, 0, 0, 0, 0, 0, 1, 158
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/regexp/index.ts", "TypeScript", 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 2, 7
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/common/regexp/signin.ts", "TypeScript", 0, 0, 0, 0, 9, 0, 0, 0, 0, 0, 1, 10
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/assets/login_bg.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 101, 0, 0, 0, 101
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/assets/main_01.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 98, 0, 0, 0, 98
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/assets/main_02.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 198, 0, 0, 0, 198
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/common/dialog/index.tsx", "TypeScript React", 0, 0, 0, 0, 0, 0, 0, 0, 118, 13, 18, 149
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/common/dialog/style.scss", "SCSS", 0, 0, 0, 0, 0, 13, 0, 0, 0, 0, 0, 13
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/home/gradeManage/index.tsx", "TypeScript React", 0, 0, 0, 0, 0, 0, 0, 0, 140, 4, 15, 159
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/home/gradeManage/style.scss", "SCSS", 0, 0, 0, 0, 0, 49, 0, 0, 0, 0, 1, 50
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/home/gradeSearch/index.tsx", "TypeScript React", 0, 0, 0, 0, 0, 0, 0, 0, 114, 2, 9, 125
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/home/gradeSearch/style.scss", "SCSS", 0, 0, 0, 0, 0, 38, 0, 0, 0, 0, 1, 39
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/home/index.tsx", "TypeScript React", 0, 0, 0, 0, 0, 0, 0, 0, 54, 0, 6, 60
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/home/style.scss", "SCSS", 0, 0, 0, 0, 0, 41, 0, 0, 0, 0, 1, 42
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/home/title/index.tsx", "TypeScript React", 0, 0, 0, 0, 0, 0, 0, 0, 18, 0, 4, 22
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/home/title/style.scss", "SCSS", 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 7
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/home/userTable/index.tsx", "TypeScript React", 0, 0, 0, 0, 0, 0, 0, 0, 108, 3, 15, 126
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/home/userTable/style.scss", "SCSS", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/main/index.tsx", "TypeScript React", 0, 0, 0, 0, 0, 0, 0, 0, 39, 0, 4, 43
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/main/style.scss", "SCSS", 0, 0, 0, 0, 0, 101, 0, 0, 0, 0, 1, 102
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/signin/components/canvas/index.tsx", "TypeScript React", 0, 0, 0, 0, 0, 0, 0, 0, 65, 2, 14, 81
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/signin/components/login/identityInput/index.tsx", "TypeScript React", 0, 0, 0, 0, 0, 0, 0, 0, 188, 13, 29, 230
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/signin/components/login/index.tsx", "TypeScript React", 0, 0, 0, 0, 0, 0, 0, 0, 49, 0, 7, 56
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/signin/components/login/style.scss", "SCSS", 0, 0, 0, 0, 0, 77, 0, 0, 0, 0, 1, 78
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/signin/components/register/index.tsx", "TypeScript React", 0, 0, 0, 0, 0, 0, 0, 0, 141, 0, 14, 155
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/signin/components/register/style.scss", "SCSS", 0, 0, 0, 0, 0, 36, 0, 0, 0, 0, 1, 37
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/signin/index.tsx", "TypeScript React", 0, 0, 0, 0, 0, 0, 0, 0, 81, 0, 11, 92
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/signin/rules/home.ts", "TypeScript", 0, 0, 0, 0, 37, 0, 0, 0, 0, 6, 5, 48
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/signin/rules/index.ts", "TypeScript", 0, 0, 0, 0, 61, 0, 0, 0, 0, 7, 3, 71
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/signin/rules/signin.ts", "TypeScript", 0, 0, 0, 0, 79, 0, 0, 0, 0, 7, 6, 92
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/components/signin/style.scss", "SCSS", 0, 0, 0, 0, 0, 44, 0, 0, 0, 0, 1, 45
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/fonts/iconfont.css", "CSS", 0, 0, 0, 0, 0, 0, 24, 0, 0, 0, 6, 30
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/fonts/iconfont.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 22, 0, 3, 11, 36
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/canvas/canvas.interface.ts", "TypeScript", 0, 0, 0, 0, 12, 0, 0, 0, 0, 3, 1, 16
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/canvas/index.ts", "TypeScript", 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/home/index.ts", "TypeScript", 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/home/manage.interface.ts", "TypeScript", 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/home/search.interface.ts", "TypeScript", 0, 0, 0, 0, 14, 0, 0, 0, 0, 11, 2, 27
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/home/usertable.interface.ts", "TypeScript", 0, 0, 0, 0, 17, 0, 0, 0, 0, 9, 4, 30
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/http.interface.ts", "TypeScript", 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 5
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/index.ts", "TypeScript", 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 7
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/mock/asideList.interface.ts", "TypeScript", 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 6
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/mock/collegeInfo.interface.ts", "TypeScript", 0, 0, 0, 0, 5, 0, 0, 0, 0, 3, 1, 9
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/mock/courseInfo.interface.ts", "TypeScript", 0, 0, 0, 0, 14, 0, 0, 0, 0, 3, 2, 19
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/mock/index.ts", "TypeScript", 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 7
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/mock/majorInfo.interface.ts", "TypeScript", 0, 0, 0, 0, 5, 0, 0, 0, 0, 8, 1, 14
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/mock/studentGrade.interface.ts", "TypeScript", 0, 0, 0, 0, 8, 0, 0, 0, 0, 11, 1, 20
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/mock/studentInfo.interface.ts", "TypeScript", 0, 0, 0, 0, 12, 0, 0, 0, 0, 3, 1, 16
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/mock/teacherInfo.interface.ts", "TypeScript", 0, 0, 0, 0, 11, 0, 0, 0, 0, 3, 1, 15
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/ref.interface.ts", "TypeScript", 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 5
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/signin/index.ts", "TypeScript", 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/signin/login.interface.ts", "TypeScript", 0, 0, 0, 0, 24, 0, 0, 0, 0, 1, 6, 31
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/signin/register.interface.ts", "TypeScript", 0, 0, 0, 0, 8, 0, 0, 0, 0, 3, 1, 12
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/signin/validate.interface.ts", "TypeScript", 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 5
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/storage/index.interface.ts", "TypeScript", 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 6
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/interfaces/storage/index.ts", "TypeScript", 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/lang/index.ts", "TypeScript", 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 1, 5
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/lang/lang.tsx", "TypeScript React", 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 1, 9
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/lang/zh_CN.ts", "TypeScript", 0, 0, 0, 0, 27, 0, 0, 0, 0, 0, 2, 29
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/main.ts", "TypeScript", 0, 0, 0, 0, 13, 0, 0, 0, 0, 0, 4, 17
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/reset.scss", "SCSS", 0, 0, 0, 0, 0, 64, 0, 0, 0, 1, 5, 70
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/router/index.ts", "TypeScript", 0, 0, 0, 0, 48, 0, 0, 0, 0, 1, 6, 55
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/shims-tsx.d.ts", "TypeScript", 0, 0, 0, 0, 10, 0, 0, 0, 0, 2, 2, 14
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/shims-vue.d.ts", "TypeScript", 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 1, 5
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/store/home/actions.ts", "TypeScript", 0, 0, 0, 0, 23, 0, 0, 0, 0, 15, 3, 41
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/store/home/home.interface.ts", "TypeScript", 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 1, 5
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/store/home/index.ts", "TypeScript", 0, 0, 0, 0, 14, 0, 0, 0, 0, 0, 2, 16
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/store/home/mutationType.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/store/home/mutations.ts", "TypeScript", 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 2, 6
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/store/index.ts", "TypeScript", 0, 0, 0, 0, 11, 0, 0, 0, 0, 0, 3, 14
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/store/rootState.interface.ts", "TypeScript", 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 1, 7
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/store/signin/actions.ts", "TypeScript", 0, 0, 0, 0, 68, 0, 0, 0, 0, 10, 4, 82
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/store/signin/getters.ts", "TypeScript", 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 2, 7
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/store/signin/index.ts", "TypeScript", 0, 0, 0, 0, 32, 0, 0, 0, 0, 3, 2, 37
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/store/signin/mutationTypes.ts", "TypeScript", 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/store/signin/mutations.ts", "TypeScript", 0, 0, 0, 0, 19, 0, 0, 0, 0, 0, 1, 20
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/store/signin/signin.interface.ts", "TypeScript", 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 1, 6
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/types/json.d.ts", "TypeScript", 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 4
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/utlis/ajax.ts", "TypeScript", 0, 0, 0, 0, 14, 0, 0, 0, 0, 0, 5, 19
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/utlis/array.ts", "TypeScript", 0, 0, 0, 0, 15, 0, 0, 0, 0, 2, 1, 18
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/utlis/index.ts", "TypeScript", 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 5
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/utlis/json.ts", "TypeScript", 0, 0, 0, 0, 15, 0, 0, 0, 0, 4, 2, 21
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/utlis/localStorage.ts", "TypeScript", 0, 0, 0, 0, 36, 0, 0, 0, 0, 5, 7, 48
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/utlis/mock.ts", "TypeScript", 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 1, 5
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/utlis/string.ts", "TypeScript", 0, 0, 0, 0, 8, 0, 0, 0, 0, 4, 0, 12
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/utlis/validate.ts", "TypeScript", 0, 0, 0, 0, 21, 0, 0, 0, 0, 4, 2, 27
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/src/vars.scss", "SCSS", 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 3
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/tsconfig.json", "JSON", 30, 0, 0, 0, 0, 0, 0, 0, 0, 11, 1, 42
+"/Users/tikitaka/不会拉小提琴的左脚/个人/projects/学生成绩管理系统/student-grades-management/vue.config.js", "JavaScript", 0, 0, 0, 15, 0, 0, 0, 0, 0, 2, 0, 17
+"Total", "-", 64, 45, 16, 20, 1480, 474, 24, 419, 1139, 184, 304, 4169

@@ -17,7 +17,7 @@ export default class Home extends mixins(Lang) {
             query: {
                 module: encodeURIComponent(asideList[key].key) 
             }
-        })
+        }).catch(() => {})
     }
 
     mounted() {

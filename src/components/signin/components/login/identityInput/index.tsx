@@ -15,13 +15,16 @@ import {
 import { SigninRules } from '@/components/signin/rules';
 import { 
     IStudentInfo, 
-    ITeacherInfo, 
+    ITeacherInfo,
     IBindUserInfo, 
     IAdminInfo,
-    IUserInfo
+    IUserInfo,
+    ILoginResponseData
 } from '@/interfaces';
-import storage from '@/utlis/localStorage';
+import Storage from '@/utlis/localStorage';
 import { isInputMatchRules } from '@/utlis';
+
+const storage = new Storage();
 
 const ComponentProp = Vue.extend({
     props: {
@@ -31,7 +34,6 @@ const ComponentProp = Vue.extend({
 
 @Component
 export default class IdentityInput extends mixins(Lang, ComponentProp) {
-
 
     @State(state => state.signin.studentInfo)
     studentInfo!: IStudentInfo;
@@ -46,7 +48,7 @@ export default class IdentityInput extends mixins(Lang, ComponentProp) {
     private autoUpdateUserInfo!: (payload: { userInfo: IBindUserInfo }) => void
 
     @Action('handleUserLogin')
-    private handleUserLogin!: (payload: { data: IBindUserInfo }) => Promise<any>
+    private handleUserLogin!: (payload: { data: IBindUserInfo }) => Promise<ILoginResponseData>
     
     public $refs!: {
         loginForm: Vue & {
@@ -131,18 +133,16 @@ export default class IdentityInput extends mixins(Lang, ComponentProp) {
     public async clickLoginButton() {
         if(this.isSelectProtocol) {
             if(isInputMatchRules(this.$refs, 'loginForm')){
-                try {
-                    const res = await this.handleUserLogin({ data: this.model });
-                    if(res) {
-                        this.$router.push({
-                            path: '/home',
-                            query: {
-                                id: this.identity.toString()
-                            }
-                        })
-                    }
-                } catch (error) {
-                    throw new Error('登录请求失败: ' + error)
+                const res = await this.handleUserLogin({ data: this.model });
+                if(res && res.token) {
+                    this.$router.push({
+                        path: '/home',
+                        query: {
+                            id: this.identity.toString()
+                        }
+                    })
+                } else {
+                    this.$message.error(res.message);
                 }
             }
         } else {
